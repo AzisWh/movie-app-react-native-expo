@@ -9,7 +9,7 @@ const TrendingCard = ({
   index,
 }: TrendingCardProps) => {
   return (
-    <Link href={`/movie/$movie_id`} asChild>
+    <Link href={`/movie/${movie_id}`} asChild>
       <TouchableOpacity className="relative w-32 pl-5">
         <Image
           source={{
