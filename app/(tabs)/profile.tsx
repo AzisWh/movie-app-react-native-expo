@@ -7,7 +7,7 @@ const profile = () => {
   return (
     <View className="flex-1 bg-primary">
       <Image source={images.bg} className="absolute z-0 w-full" />
-      <Image source={icons.logo} className="w-12 h-10 mx-auto mt-20 mb-5" />
+      <Image source={icons.jawa} className="w-20 h-20 mx-auto mt-20 mb-5" />
       <View className="items-center justify-center flex-1">
         <Text className="font-bold text-center text-white">Profile</Text>
       </View>

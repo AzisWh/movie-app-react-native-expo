@@ -45,7 +45,7 @@ export default function Index() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ minHeight: "100%", paddingBottom: 10 }}
       >
-        <Image source={icons.logo} className="w-12 h-10 mx-auto mt-20 mb-5" />
+        <Image source={icons.jawa} className="w-20 h-20 mx-auto mt-20 mb-5" />
 
         {moviesLoading || trendingLoading ? (
           <ActivityIndicator

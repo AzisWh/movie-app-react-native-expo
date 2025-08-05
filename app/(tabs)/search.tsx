@@ -70,7 +70,7 @@ const search = () => {
         ListHeaderComponent={
           <>
             <View className="flex-row items-center justify-center w-full mt-20">
-              <Image source={icons.logo} className="w-12 h-10" />
+              <Image source={icons.jawa} className="w-20 h-20" />
             </View>
 
             <View className="my-5">
