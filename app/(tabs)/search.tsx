@@ -1,4 +1,5 @@
 import { fetchMovie } from "@/apiservices/api";
+import { updateSearchCount } from "@/apiservices/appwrite";
 import useFetch from "@/apiservices/useFetch";
 import MovieCard from "@/components/MovieCard";
 import SearchBar from "@/components/SearchBar";
@@ -27,18 +28,22 @@ const search = () => {
   // console.log(movies, error);
 
   useEffect(() => {
-    const fetchData = setTimeout(async () => {
+    const fetchData = setTimeout(() => {
       if (searchQuery.trim()) {
-        await loadMovies();
+        loadMovies();
       } else {
         reset();
       }
     }, 500);
 
-    return () => {
-      clearTimeout(fetchData);
-    };
+    return () => clearTimeout(fetchData);
   }, [searchQuery]);
+
+  useEffect(() => {
+    if (searchQuery.trim() && movies?.length > 0) {
+      updateSearchCount(searchQuery, movies[0]);
+    }
+  }, [movies]);
 
   useEffect(() => {
     if (error) {
